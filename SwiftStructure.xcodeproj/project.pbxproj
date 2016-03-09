@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		855E55EA1C9076F3005B7580 /* QueueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855E55E91C9076F3005B7580 /* QueueTest.swift */; };
+		855E55EB1C908489005B7580 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855E55E71C9076EB005B7580 /* Queue.swift */; };
+		855E55EC1C908491005B7580 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E479091C903F80002465D2 /* List.swift */; };
+		855E55ED1C908495005B7580 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E479061C8F9B88002465D2 /* Stack.swift */; };
 		85E479011C8F9B76002465D2 /* StackTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E479001C8F9B76002465D2 /* StackTest.swift */; };
 		85E479081C8F9C80002465D2 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E479061C8F9B88002465D2 /* Stack.swift */; };
+		85E4790A1C903F80002465D2 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E479091C903F80002465D2 /* List.swift */; };
+		85E4790C1C903FB6002465D2 /* ListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E4790B1C903FB6002465D2 /* ListTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,11 +30,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		855E55E71C9076EB005B7580 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		855E55E91C9076F3005B7580 /* QueueTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueTest.swift; sourceTree = "<group>"; };
 		85E478F01C8F9B36002465D2 /* SwiftStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftStructure; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E478FE1C8F9B76002465D2 /* Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E479001C8F9B76002465D2 /* StackTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackTest.swift; sourceTree = "<group>"; };
 		85E479021C8F9B76002465D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85E479061C8F9B88002465D2 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		85E479091C903F80002465D2 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		85E4790B1C903FB6002465D2 /* ListTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				85E479061C8F9B88002465D2 /* Stack.swift */,
+				85E479091C903F80002465D2 /* List.swift */,
+				855E55E71C9076EB005B7580 /* Queue.swift */,
 			);
 			path = SwiftStructure;
 			sourceTree = "<group>";
@@ -79,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				85E479001C8F9B76002465D2 /* StackTest.swift */,
+				85E4790B1C903FB6002465D2 /* ListTest.swift */,
+				855E55E91C9076F3005B7580 /* QueueTest.swift */,
 				85E479021C8F9B76002465D2 /* Info.plist */,
 			);
 			path = Test;
@@ -172,6 +186,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				855E55ED1C908495005B7580 /* Stack.swift in Sources */,
+				85E4790A1C903F80002465D2 /* List.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,8 +195,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				855E55EB1C908489005B7580 /* Queue.swift in Sources */,
+				85E4790C1C903FB6002465D2 /* ListTest.swift in Sources */,
 				85E479081C8F9C80002465D2 /* Stack.swift in Sources */,
 				85E479011C8F9B76002465D2 /* StackTest.swift in Sources */,
+				855E55EA1C9076F3005B7580 /* QueueTest.swift in Sources */,
+				855E55EC1C908491005B7580 /* List.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +347,7 @@
 				85E478F91C8F9B36002465D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		85E479031C8F9B76002465D2 /* Build configuration list for PBXNativeTarget "Test" */ = {
 			isa = XCConfigurationList;
@@ -335,6 +356,7 @@
 				85E479051C8F9B76002465D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

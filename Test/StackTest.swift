@@ -1,6 +1,6 @@
 //
-//  Test.swift
-//  Test
+//  StackTest.swift
+//  StackTest
 //
 //  Created by Ahmed Onawale on 3/9/16.
 //  Copyright © 2016 Ahmed Onawale. All rights reserved.
