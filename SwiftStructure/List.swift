@@ -86,7 +86,6 @@ extension Listable where T: CustomStringConvertible {
     }
 }
 
-
 struct List<T>: Listable {
     var position = 0
     var elements: [T] = []

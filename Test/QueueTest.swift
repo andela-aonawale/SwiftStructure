@@ -15,6 +15,7 @@ class QueueTest: XCTestCase {
         var queue = Queue<Int>()
         XCTAssertNil(queue.dequeue())
         XCTAssertEqual(queue.peek(), nil)
+        XCTAssertTrue(queue.isEmpty)
     }
     
     func testOneElement() {

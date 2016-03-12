@@ -36,6 +36,7 @@ extension Queueable {
     func peek() -> T? {
         return elements.first
     }
+    var isEmpty: Bool { return elements.isEmpty }
 }
 
 extension Queueable where T: CustomStringConvertible {
