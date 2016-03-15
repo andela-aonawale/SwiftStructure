@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		852D50471C97BA3D00B6193E /* Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852D50461C97BA3D00B6193E /* Dequeue.swift */; };
+		852D50491C97BA4700B6193E /* DequeueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852D50481C97BA4700B6193E /* DequeueTest.swift */; };
+		852D504A1C97BC2C00B6193E /* Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852D50461C97BA3D00B6193E /* Dequeue.swift */; };
 		855E55EA1C9076F3005B7580 /* QueueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855E55E91C9076F3005B7580 /* QueueTest.swift */; };
 		855E55EB1C908489005B7580 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855E55E71C9076EB005B7580 /* Queue.swift */; };
 		855E55EC1C908491005B7580 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E479091C903F80002465D2 /* List.swift */; };
@@ -33,6 +36,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		852D50461C97BA3D00B6193E /* Dequeue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dequeue.swift; sourceTree = "<group>"; };
+		852D50481C97BA4700B6193E /* DequeueTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DequeueTest.swift; sourceTree = "<group>"; };
 		855E55E71C9076EB005B7580 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		855E55E91C9076F3005B7580 /* QueueTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueTest.swift; sourceTree = "<group>"; };
 		85E478F01C8F9B36002465D2 /* SwiftStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftStructure; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +94,7 @@
 				85E479091C903F80002465D2 /* List.swift */,
 				855E55E71C9076EB005B7580 /* Queue.swift */,
 				85F2FA4F1C94BFEC005A651D /* LinkedList.swift */,
+				852D50461C97BA3D00B6193E /* Dequeue.swift */,
 			);
 			path = SwiftStructure;
 			sourceTree = "<group>";
@@ -101,6 +107,7 @@
 				855E55E91C9076F3005B7580 /* QueueTest.swift */,
 				85E479021C8F9B76002465D2 /* Info.plist */,
 				85F2FA511C959A3A005A651D /* LinkedListTest.swift */,
+				852D50481C97BA4700B6193E /* DequeueTest.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -195,6 +202,7 @@
 			files = (
 				85F2FA501C94BFEC005A651D /* LinkedList.swift in Sources */,
 				855E55ED1C908495005B7580 /* Stack.swift in Sources */,
+				852D50471C97BA3D00B6193E /* Dequeue.swift in Sources */,
 				85E4790A1C903F80002465D2 /* List.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,7 +211,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				852D504A1C97BC2C00B6193E /* Dequeue.swift in Sources */,
 				855E55EB1C908489005B7580 /* Queue.swift in Sources */,
+				852D50491C97BA4700B6193E /* DequeueTest.swift in Sources */,
 				85F2FA521C959A3A005A651D /* LinkedListTest.swift in Sources */,
 				85E4790C1C903FB6002465D2 /* ListTest.swift in Sources */,
 				85E479081C8F9C80002465D2 /* Stack.swift in Sources */,
