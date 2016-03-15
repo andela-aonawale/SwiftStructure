@@ -37,6 +37,7 @@ extension Queueable {
         return elements.first
     }
     var isEmpty: Bool { return elements.isEmpty }
+    var count: Int { return elements.count }
 }
 
 extension Queueable where T: CustomStringConvertible {
