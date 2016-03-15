@@ -8,11 +8,8 @@
 
 import Foundation
 
-protocol Deck: Queueable {
-    
-}
-
-extension Deck {
+struct Dequeue<T>: Queueable {
+    var elements: [T] = []
     mutating func enqueueFront(element: T) {
         elements.insert(element, atIndex: 0)
     }
@@ -25,8 +22,4 @@ extension Deck {
     func peekBack() -> T? {
         return elements.last
     }
-}
-
-struct Dequeue<T>: Deck {
-    var elements: [T] = []
 }
