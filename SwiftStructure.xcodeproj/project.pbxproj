@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8515B60F1C99E35D009D69B2 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8515B60E1C99E35D009D69B2 /* PriorityQueue.swift */; };
+		8515B6111C99E36C009D69B2 /* PriorityQueueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8515B6101C99E36C009D69B2 /* PriorityQueueTest.swift */; };
+		8515B6121C99E38F009D69B2 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8515B60E1C99E35D009D69B2 /* PriorityQueue.swift */; };
+		8515B6141C9A09C1009D69B2 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8515B6131C9A09C1009D69B2 /* Tree.swift */; };
+		8515B6161C9A09CA009D69B2 /* TreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8515B6151C9A09CA009D69B2 /* TreeTest.swift */; };
+		8515B6171C9A09CF009D69B2 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8515B6131C9A09C1009D69B2 /* Tree.swift */; };
 		852D50471C97BA3D00B6193E /* Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852D50461C97BA3D00B6193E /* Dequeue.swift */; };
 		852D50491C97BA4700B6193E /* DequeueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852D50481C97BA4700B6193E /* DequeueTest.swift */; };
 		852D504A1C97BC2C00B6193E /* Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852D50461C97BA3D00B6193E /* Dequeue.swift */; };
@@ -36,6 +42,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8515B60E1C99E35D009D69B2 /* PriorityQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
+		8515B6101C99E36C009D69B2 /* PriorityQueueTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueueTest.swift; sourceTree = "<group>"; };
+		8515B6131C9A09C1009D69B2 /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		8515B6151C9A09CA009D69B2 /* TreeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeTest.swift; sourceTree = "<group>"; };
 		852D50461C97BA3D00B6193E /* Dequeue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dequeue.swift; sourceTree = "<group>"; };
 		852D50481C97BA4700B6193E /* DequeueTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DequeueTest.swift; sourceTree = "<group>"; };
 		855E55E71C9076EB005B7580 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
@@ -95,6 +105,8 @@
 				855E55E71C9076EB005B7580 /* Queue.swift */,
 				85F2FA4F1C94BFEC005A651D /* LinkedList.swift */,
 				852D50461C97BA3D00B6193E /* Dequeue.swift */,
+				8515B60E1C99E35D009D69B2 /* PriorityQueue.swift */,
+				8515B6131C9A09C1009D69B2 /* Tree.swift */,
 			);
 			path = SwiftStructure;
 			sourceTree = "<group>";
@@ -108,6 +120,8 @@
 				85E479021C8F9B76002465D2 /* Info.plist */,
 				85F2FA511C959A3A005A651D /* LinkedListTest.swift */,
 				852D50481C97BA4700B6193E /* DequeueTest.swift */,
+				8515B6101C99E36C009D69B2 /* PriorityQueueTest.swift */,
+				8515B6151C9A09CA009D69B2 /* TreeTest.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -202,6 +216,8 @@
 			files = (
 				85F2FA501C94BFEC005A651D /* LinkedList.swift in Sources */,
 				855E55ED1C908495005B7580 /* Stack.swift in Sources */,
+				8515B60F1C99E35D009D69B2 /* PriorityQueue.swift in Sources */,
+				8515B6141C9A09C1009D69B2 /* Tree.swift in Sources */,
 				852D50471C97BA3D00B6193E /* Dequeue.swift in Sources */,
 				85E4790A1C903F80002465D2 /* List.swift in Sources */,
 			);
@@ -213,10 +229,14 @@
 			files = (
 				852D504A1C97BC2C00B6193E /* Dequeue.swift in Sources */,
 				855E55EB1C908489005B7580 /* Queue.swift in Sources */,
+				8515B6111C99E36C009D69B2 /* PriorityQueueTest.swift in Sources */,
 				852D50491C97BA4700B6193E /* DequeueTest.swift in Sources */,
 				85F2FA521C959A3A005A651D /* LinkedListTest.swift in Sources */,
+				8515B6121C99E38F009D69B2 /* PriorityQueue.swift in Sources */,
 				85E4790C1C903FB6002465D2 /* ListTest.swift in Sources */,
+				8515B6171C9A09CF009D69B2 /* Tree.swift in Sources */,
 				85E479081C8F9C80002465D2 /* Stack.swift in Sources */,
+				8515B6161C9A09CA009D69B2 /* TreeTest.swift in Sources */,
 				85E479011C8F9B76002465D2 /* StackTest.swift in Sources */,
 				855E55EA1C9076F3005B7580 /* QueueTest.swift in Sources */,
 				85F2FA531C959A69005A651D /* LinkedList.swift in Sources */,
