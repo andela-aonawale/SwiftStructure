@@ -9,7 +9,7 @@
 import Foundation
 
 protocol Linkable {
-    typealias T
+    associatedtype T
     var value: T { get set }
     var next: Self? { get set }
     var previous: Self? { get set }
@@ -62,28 +62,30 @@ class LinkedList<T> {
         var total = 1
         while let next = node.next {
             node = next
-            ++total
+            total += 1
         }
         return total
     }
     
-    func nodeAtIndex(var index: Int) -> E? {
+    func nodeAtIndex(index: Int) -> E? {
+        var index = index
         guard index >= 0 else { return nil }
         var node = head
         while let current = node where index != 0 {
-            --index
+            index -= 1
             node = current.next
         }
         return node
     }
     
-    subscript(var index: Int) -> E {
+    subscript(index: Int) -> E {
         let node = nodeAtIndex(index)
         assert(node != nil)
         return node!
     }
     
-    private func nodesBeforeAndAfter(var index: Int) -> (E?, E?) {
+    private func nodesBeforeAndAfter(index: Int) -> (E?, E?) {
+        var index = index
         assert(index >= 0)
         var next = head
         var prev: E?
@@ -190,15 +192,3 @@ extension LinkedList: CustomStringConvertible {
         return s + "]"
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

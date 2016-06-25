@@ -13,7 +13,7 @@ Lists are especially useful if we don’t have to perform searches on the items 
 import Foundation
 
 protocol Listable {
-    typealias T
+    associatedtype T
     var position: Int { get set }
     var elements: [T] { get set }
     init(_ elements: T...)
@@ -38,12 +38,12 @@ extension Listable {
     }
     mutating func previous() {
         if position > 0 {
-            --position
+            position -= 1
         }
     }
     mutating func next() {
         if position < length() - 1 {
-            ++position
+            position += 1
         }
     }
     func currentPosition() -> Int {

@@ -6,6 +6,12 @@
 //  Copyright © 2016 Ahmed Onawale. All rights reserved.
 //
 
+/*
+ A tree represents hierarchical relationships between objects.
+ A tree consists of nodes, and these nodes are linked to one another.
+ Nodes have links to their children and usually to their parent as well. The children are the nodes below a given node; the parent is the node above. A node always has just one parent but can have multiple children.
+*/
+
 import Foundation
 
 class TreeNode<T> {

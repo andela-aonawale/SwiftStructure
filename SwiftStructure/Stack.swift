@@ -10,7 +10,7 @@ A stack is a list of elements that are accessible only from one end of the list,
 */
 
 protocol Stackable {
-    typealias T
+    associatedtype T
     var elements: [T] { get set }
 }
 

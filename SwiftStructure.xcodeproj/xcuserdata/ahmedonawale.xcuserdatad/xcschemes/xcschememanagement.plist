@@ -7,16 +7,36 @@
 		<key>SwiftStructure.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>Test.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>850A98161D1C54F000E1B16C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>850A98221D1C569800E1B16C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>850A982D1D1C57AE00E1B16C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>850A98381D1C57CE00E1B16C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>85E478EF1C8F9B36002465D2</key>
 		<dict>
 			<key>primary</key>

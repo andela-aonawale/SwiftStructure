@@ -13,7 +13,7 @@ A queue is an example of a first-in, first-out (FIFO) data structure. Queues are
 import Foundation
 
 protocol Queueable {
-    typealias T
+    associatedtype T
     var elements: [T] { get set }
 }
 
@@ -49,4 +49,3 @@ extension Queueable where T: CustomStringConvertible {
 struct Queue<T>: Queueable {
     var elements: [T] = []
 }
-
