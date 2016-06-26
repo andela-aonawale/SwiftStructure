@@ -6,16 +6,6 @@
 //  Copyright © 2016 Ahmed Onawale. All rights reserved.
 //
 
-import Foundation
-
-protocol Linkable {
-    associatedtype T
-    var value: T { get set }
-    var next: Self? { get set }
-    var previous: Self? { get set }
-    init(_ value: T)
-}
-
 final class Node<T>: Linkable {
     var value: T
     var next: Node?

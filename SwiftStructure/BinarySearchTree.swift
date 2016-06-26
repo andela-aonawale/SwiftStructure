@@ -6,133 +6,8 @@
 //  Copyright © 2016 Ahmed Onawale. All rights reserved.
 //
 
-protocol BinaryStructure {
-    associatedtype T: Comparable
-    var value: T { get }
-    var parent: Self? { get set }
-    var left: Self? { get set }
-    var right: Self? { get set }
-    init(value: T)
-}
-
-extension BinaryStructure {
-    
-    var isRoot: Bool {
-        return parent == nil
-    }
-    
-    var isLeaf: Bool {
-        return left == nil && right == nil
-    }
-    
-    var isLeftChild: Bool {
-        return parent?.left?.value == value
-    }
-    
-    var isRightChild: Bool {
-        return parent?.right?.value == value
-    }
-    
-    var hasLeftChild: Bool {
-        return left != nil
-    }
-    
-    var hasRightChild: Bool {
-        return right != nil
-    }
-    
-    var hasAnyChild: Bool {
-        return hasLeftChild || hasRightChild
-    }
-    
-    var hasBothChildren: Bool {
-        return hasLeftChild && hasRightChild
-    }
-    
-    var count: Int {
-        return (left?.count ?? 0) + 1 + (right?.count ?? 0)
-    }
-    
-}
-
-protocol BinarySearchStructure: BinaryStructure, CustomStringConvertible {}
-
-extension BinarySearchStructure {
-    var description: String {
-        var s = ""
-        if let left = left {
-            s += "(\(left.description)) <- "
-        }
-        s += "\(value)"
-        if let right = right {
-            s += " -> (\(right.description))"
-        }
-        return s
-    }
-    
-    func search(value: T) -> Self? {
-        if value < self.value {
-            return left?.search(value)
-        } else if value > self.value {
-            return right?.search(value)
-        } else {
-            return self
-        }
-    }
-}
-
-extension BinarySearchStructure {
-    
-    func traverseInOrder(@noescape process: T -> Void) {
-        left?.traverseInOrder(process)
-        process(value)
-        right?.traverseInOrder(process)
-    }
-    
-    func traversePreOrder(@noescape process: T -> Void) {
-        process(value)
-        left?.traversePreOrder(process)
-        right?.traversePreOrder(process)
-    }
-    
-    func traversePostOrder(@noescape process: T -> Void) {
-        left?.traversePostOrder(process)
-        right?.traversePostOrder(process)
-        process(value)
-    }
-    
-    func map<U>(@noescape transform: T -> U) -> [U] {
-        var array = [U]()
-        if let left = left { array += left.map(transform) }
-        array.append(transform(self.value))
-        if let right = right { array += right.map(transform) }
-        return array
-    }
-    
-    func flatMap<U>(@noescape transform: T -> U?) -> [U] {
-        var array = [U]()
-        if let left = left { array += left.flatMap(transform) }
-        if let value = transform(self.value) {
-            array.append(value)
-        }
-        if let right = right { array += right.flatMap(transform) }
-        return array
-    }
-    
-    func filter(@noescape predicate: T -> Bool) -> [T] {
-        var array = [T]()
-        if let left = left { array += left.filter(predicate) }
-        if  predicate(self.value) {
-            array.append(self.value)
-        }
-        if let right = right { array += right.filter(predicate) }
-        return array
-    }
-    
-}
-
 final class BinarySearchTree<T: Comparable>: BinarySearchStructure {
-    let value: T
+    var value: T
     var parent: BinarySearchTree?
     var left: BinarySearchTree?
     var right: BinarySearchTree?
@@ -178,7 +53,48 @@ extension BinarySearchTree {
     func toArray() -> [T] {
         return map { $0 }
     }
+    
 }
 
-
-
+extension BinarySearchTree {
+    
+    func reconnectParentToNode(node: BinarySearchTree?) {
+        if let parent = parent {
+            if isLeftChild {
+                parent.left = node
+            } else {
+                parent.right = node
+            }
+        }
+        node?.parent = parent
+    }
+    
+    func remove() {
+        if let left = left {
+            if let right = right {
+                // This node has two children. It must be replaced by the smallest
+                // child that is larger than this node's value, which is the leftmost
+                // descendent of the right child.
+                let successor = right.minimum()
+                
+                // Rather than deleting the current node (which is problematic for the
+                // root node) we give it the successor's value and remove the successor.
+                value = successor.value
+                
+                // If this in-order successor has a right child of its own (it cannot
+                // have a left child by definition), then that must take its place.
+                successor.remove()
+            } else {
+                // This node only has a left child. The left child replaces the node.
+                reconnectParentToNode(left)
+            }
+        } else if let right = right {
+            // This node only has a right child. The right child replaces the node.
+            reconnectParentToNode(right)
+        } else {
+            // This node has no children. We just disconnect it from its parent.
+            reconnectParentToNode(nil)
+        }
+    }
+    
+}
