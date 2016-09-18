@@ -31,9 +31,7 @@ class InsertionSortTest: XCTestCase {
         struct Event {
             let priority: Int
         }
-        let events = [109, -1, -33, 9, 2, 27, 8, 15, 1, 3, 0, 2006, 9273].map {
-            return Event(priority: $0)
-        }
+        let events = [109, -1, -33, 9, 2, 27, 8, 15, 1, 3, 0, 2006, 9273].map { Event(priority: $0) }
         let ascending = insertionSort(events) { $0.priority < $1.priority }
         XCTAssertEqual(ascending.map { $0.priority }, [-33, -1, 0, 1, 2, 3, 8, 9, 15, 27, 109, 2006, 9273])
         let descending = insertionSort(events) { $0.priority > $1.priority }
